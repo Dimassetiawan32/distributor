@@ -23,4 +23,8 @@ Route::group(['prefix' => 'list'], function(){
     Route::get('index', 'ListController@index')->name('list.index');
     Route::get('create', 'ListController@create')->name('list.create');
     Route::post('save', 'ListController@store')->name('list.save');
+    Route::get('editform/{list}','listController@edit')->name('list.editform');
+    Route::patch('update/{list}','listController@update')->name('list.update');
+    Route::get('show/{list}','listController@show')->name('list.show');
+    Route::delete('delete/{list}', 'listController@destroy')->name('list.delete');
 });

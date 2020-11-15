@@ -22,7 +22,8 @@ class ListController extends Controller
 
     public function create()
     {
-        return view("list.create");
+        $getKode = $this->list->generateCode();
+        return view("list.create", compact('getKode'));
     }
 
     public function store()
@@ -60,6 +61,36 @@ class ListController extends Controller
 
             $image->save();
         }
+    }
+    public function edit($id)
+    {
+        
+        $list = Listbarang::findOrFail($id);
+        return view("list.edit", compact('list'));
+    }
+    
+    public function update(Listbarang $list)
+    {
+        $list->update($this->validateRequest());
+        $this->storeImage($list);
+        return redirect()->back()->with(['success' => 'Data Barang Berhasil Diperbarui']);
+    }
+
+    public function show($id)
+    {
+        $list = Listbarang::findOrFail($id);
+        return view("list.show", compact('list'));
+    }
+    
+    public function destroy(Listbarang $list)
+    {
+        $list->delete();
+
+        if(\File::exists(public_path('storage/'. $list->images))){
+            \File::delete(public_path('storage/'. $list->images));
+        }
+
+        return redirect()->back()->with(['success' => 'Data berhasil di hapus']);
     }
 
 }

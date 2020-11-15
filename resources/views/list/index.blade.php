@@ -30,9 +30,13 @@
                                 <td>{{$list->harga}}</td>
                                 <td>{{$list->stok}}</td>
                                 <td>
-                                <a href="" class="btn btn-outline-success btn-sm">Show</a>                        
-                                <a href="" class="btn btn-outline-primary btn-sm">Edit</a>
-                                <button class="btn btn-outline-danger btn-sm">Delete</button>                        
+                                    <form action="{{route('list.delete', $list->id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{route('list.show', $list->id)}}" class="btn btn-outline-success btn-sm">Show</a>
+                                        <a href="{{route('list.editform', $list->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                        <button href="" class="btn btn-outline-danger btn-sm">Hapus</button>
+                                    </form>                      
                                 </td>
                             </tr>
                             @endforeach
