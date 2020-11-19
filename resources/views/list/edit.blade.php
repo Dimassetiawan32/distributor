@@ -30,13 +30,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Harga</label>
-                                    <input type="text" name="harga" class="form-control" value="{{$list->harga}}" id="" >
+                                    <input type="number" name="harga" class="form-control" value="{{$list->harga}}" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Stok</label>
-                                    <input type="text" name="stok" class="form-control" value="{{$list->stok}}" id="" >
+                                    <input type="number" name="stok" class="form-control" value="{{$list->stok}}" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">

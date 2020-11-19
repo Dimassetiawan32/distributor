@@ -27,7 +27,7 @@
                             <tr>
                                 <td>{{$list->kode_barang}}</td>
                                 <td>{{$list->nama}}</td>
-                                <td>{{$list->harga}}</td>
+                                <td>Rp. {{$list->harga}}</td>
                                 <td>{{$list->stok}}</td>
                                 <td>
                                     <form action="{{route('list.delete', $list->id)}}" method="post">

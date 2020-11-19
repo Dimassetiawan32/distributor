@@ -29,13 +29,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Harga</label>
-                                    <input type="text" name="harga" class="form-control" id="" >
+                                    <input type="number" name="harga" class="form-control" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Stok</label>
-                                    <input type="text" name="stok" class="form-control" id="" >
+                                    <input type="number" name="stok" class="form-control" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">
