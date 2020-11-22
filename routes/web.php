@@ -28,3 +28,8 @@ Route::group(['prefix' => 'list'], function(){
     Route::get('show/{list}','listController@show')->name('list.show');
     Route::delete('delete/{list}', 'listController@destroy')->name('list.delete');
 });
+
+Route::group(['prefix' => 'pesanan'], function(){
+    Route::get('index', 'PesananController@index')->name('pesanan.index');
+    Route::get('create', 'PesananController@create')->name('pesanan.create');
+});

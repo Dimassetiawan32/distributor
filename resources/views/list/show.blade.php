@@ -44,7 +44,7 @@
                         <div class="col-lg-12 pb-2">
                             <div class="row">
                                 <div class="col-lg-12">
-                                <a href="#" class="btn btn-secondary btn-block">Pesan</a>
+                                <a href="{{route('pesanan.create')}}" class="btn btn-secondary btn-block">Pesan</a>
                             </div>
                         </div>
                     </div>

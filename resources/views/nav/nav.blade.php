@@ -14,7 +14,7 @@
                             <a href="{{route('list.index')}}" class="nav-link">List Barang</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Pesanan Barang</a>
+                            <a href="{{route('pesanan.index')}}" class="nav-link">Pesanan Barang</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">Laporan</a>
