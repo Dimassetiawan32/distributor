@@ -32,4 +32,22 @@ Route::group(['prefix' => 'list'], function(){
 Route::group(['prefix' => 'pesanan'], function(){
     Route::get('index', 'PesananController@index')->name('pesanan.index');
     Route::get('create', 'PesananController@create')->name('pesanan.create');
+    Route::post('save', 'PesananController@store')->name('pesanan.save');
+    Route::get('editform/{pesanan}','PesananController@edit')->name('pesanan.editform');
+    Route::patch('update/{pesanan}','PesananController@update')->name('pesanan.update');
+    Route::delete('delete/{pesanan}', 'PesananController@destroy')->name('pesanan.delete');
+});
+
+Route::group(['prefix' => 'laporan'], function(){
+    Route::get('index', 'LaporanController@index')->name('laporan.index');
+});
+
+Route::group(['prefix' => 'suplier'], function(){
+    Route::get('index', 'SuplierController@index')->name('suplier.index');
+    Route::get('create', 'SuplierController@create')->name('suplier.create');
+    Route::post('save', 'SuplierController@store')->name('suplier.save');
+    Route::get('editform/{suplier}', 'SuplierController@edit')->name('suplier.editform');
+    Route::patch('update/{suplier}', 'SuplierController@update')->name('suplier.update');
+    Route::get('show/{suplier}', 'SuplierController@show')->name('suplier.show');
+    Route::delete('delete/{suplier}', 'SuplierController@destroy')->name('suplier.delete');
 });

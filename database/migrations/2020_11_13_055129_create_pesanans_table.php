@@ -15,14 +15,10 @@ class CreatePesanansTable extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kode_barang')->unique();
-            $table->string('nama');
-            $table->string('harga');
             $table->string('jumlah');
             $table->string('tanggal_pesan');
             $table->string('pemesan');
             $table->string('alamat_pemesan');
-            $table->string('keterangan');
             $table->timestamps();
         });
     }

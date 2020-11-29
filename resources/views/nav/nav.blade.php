@@ -17,7 +17,10 @@
                             <a href="{{route('pesanan.index')}}" class="nav-link">Pesanan Barang</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Laporan</a>
+                            <a href="{{route('suplier.index')}}" class="nav-link">Data Suplier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('laporan.index')}}" class="nav-link">Laporan</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">Data User</a>

@@ -6,7 +6,7 @@
         <div class="col-md-6 ">
             <div class="card border-0 shadow">
                 <div class="card-body">
-                    <form action="{{route('list.save')}}" enctype="multipart/form-data" method="POST">
+                    <form action="{{route('suplier.save')}}" enctype="multipart/form-data" method="POST">
                         @csrf
                         @if(session('success'))
                             <div class="alert alert-success">
@@ -16,38 +16,50 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Kode Barang</label>
-                                    <input type="text" name="kode_barang" class="form-control" value="{{ $getKode }}" id="">
+                                    <label for="">Kode Suplier</label>
+                                    <input type="text" name="kode_suplier" class="form-control" value="{{ $getKode }}" id="" readonly>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Nama Barang</label>
-                                    <input type="text" name="nama" class="form-control" id="" >
+                                    <label for="">Nama Suplier</label>
+                                    <input type="text" name="nama_suplier" class="form-control" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Harga</label>
-                                    <input type="number" name="harga" class="form-control" id="" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Stok</label>
-                                    <input type="number" name="stok" class="form-control" id="" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Tanggal</label>
-                                    <input type="date" name="tanggal" class="form-control" id="" >
+                                    <label for="">Pemimpin</label>
+                                    <input type="text" name="pemimpin" class="form-control" id="" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Image</label>
                                     <input type="file" name="images" class="form-control" id="" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Jenis Produksi</label>
+                                    <input type="text" name="jenis_produksi" class="form-control" id="" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">alamat</label>
+                                    <input type="text" name="alamat" class="form-control" id="" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="text" name="email" class="form-control" id="" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nomor Telpon</label>
+                                    <input type="text" name="no_telpon" class="form-control" id="" >
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -59,7 +71,7 @@
                         </div>
                         <div class="">
                             <button type="submit" class="btn btn-outline-info">Save</button>
-                            <a href="{{route('list.index')}}" class="btn btn-outline-secondary">Back</a>
+                            <a href="{{route('suplier.index')}}" class="btn btn-outline-secondary">Back</a>
                         </div>
                     </form>
                 </div>

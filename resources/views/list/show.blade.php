@@ -39,7 +39,7 @@
                         <hr>
                         </div>
                         <div class="col-lg-12 section-detail">
-                            <p class="ml-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p><hr>
+                            <p class="ml-2">{{$list->keterangan}}</p><hr>
                         </div>
                         <div class="col-lg-12 pb-2">
                             <div class="row">
